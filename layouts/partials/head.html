@@ -31,6 +31,10 @@
 {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
+{{ if .Site.Params.plausibleDomain }}
+<script defer data-domain="{{ .Site.Params.plausibleDomain }}" src="https://plausible.io/js/script.js"></script>
+{{ end }}
+
 <!-- https://clarity.microsoft.com for detail -->
 {{ if .Site.Params.Clarity }}
 <script type="text/javascript">
